@@ -53,18 +53,12 @@
             this.lDay = new System.Windows.Forms.Label();
             this.lTime = new System.Windows.Forms.Label();
             this.tpFinance = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.nOwnership = new System.Windows.Forms.NumericUpDown();
             this.xUnlimitedFunds = new System.Windows.Forms.CheckBox();
             this.nBankLoanAmount = new System.Windows.Forms.NumericUpDown();
             this.nCreditRating = new System.Windows.Forms.NumericUpDown();
             this.nBalance = new System.Windows.Forms.NumericUpDown();
             this.tpPrisoners = new System.Windows.Forms.TabPage();
-            this.m_BodyType = new System.Windows.Forms.TextBox();
-            this.m_Age = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.moveToPercentage = new System.Windows.Forms.Button();
             this.bRelease = new System.Windows.Forms.Button();
             this.lServedStats = new System.Windows.Forms.Label();
             this.lServed = new System.Windows.Forms.Label();
@@ -77,7 +71,6 @@
             this.lbPrisoners = new System.Windows.Forms.ListBox();
             this.tpResearch = new System.Windows.Forms.TabPage();
             this.clbResearch = new System.Windows.Forms.CheckedListBox();
-            this.Gang = new System.Windows.Forms.TabPage();
             this.menu = new System.Windows.Forms.MenuStrip();
             this.miFile = new System.Windows.Forms.ToolStripMenuItem();
             this.miFileOpen = new System.Windows.Forms.ToolStripMenuItem();
@@ -86,7 +79,6 @@
             this.miExit = new System.Windows.Forms.ToolStripMenuItem();
             this.miShortcuts = new System.Windows.Forms.ToolStripMenuItem();
             this.miReleasePrisoners = new System.Windows.Forms.ToolStripMenuItem();
-            this.miReleaseInsane = new System.Windows.Forms.ToolStripMenuItem();
             this.miReleaseProtected = new System.Windows.Forms.ToolStripMenuItem();
             this.miReleaseMinSec = new System.Windows.Forms.ToolStripMenuItem();
             this.miReleaseNormal = new System.Windows.Forms.ToolStripMenuItem();
@@ -95,7 +87,6 @@
             this.miReleaseDeathRow = new System.Windows.Forms.ToolStripMenuItem();
             this.miReleaseAll = new System.Windows.Forms.ToolStripMenuItem();
             this.miEliminatePrisoners = new System.Windows.Forms.ToolStripMenuItem();
-            this.miEliminateInsane = new System.Windows.Forms.ToolStripMenuItem();
             this.miEliminateProtected = new System.Windows.Forms.ToolStripMenuItem();
             this.miEliminateMinSec = new System.Windows.Forms.ToolStripMenuItem();
             this.miEliminateNormal = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,7 +102,9 @@
             this.miRemoveAllContraband = new System.Windows.Forms.ToolStripMenuItem();
             this.miHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.miAbout = new System.Windows.Forms.ToolStripMenuItem();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Gang = new System.Windows.Forms.TabPage();
+            this.miEliminateInsane = new System.Windows.Forms.ToolStripMenuItem();
+            this.moveToPercentage = new System.Windows.Forms.Button();
             lOwnershipUnits = new System.Windows.Forms.Label();
             lBankLoanAmontUnits = new System.Windows.Forms.Label();
             lBankLoanAmount = new System.Windows.Forms.Label();
@@ -139,7 +132,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.nBalance)).BeginInit();
             this.tpPrisoners.SuspendLayout();
             this.tpResearch.SuspendLayout();
-            this.Gang.SuspendLayout();
             this.menu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -209,7 +201,7 @@
             // sReleasePrisonersSeparator
             // 
             sReleasePrisonersSeparator.Name = "sReleasePrisonersSeparator";
-            sReleasePrisonersSeparator.Size = new System.Drawing.Size(171, 6);
+            sReleasePrisonersSeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // lSurname
             // 
@@ -435,7 +427,6 @@
             // 
             // tpFinance
             // 
-            this.tpFinance.Controls.Add(this.button1);
             this.tpFinance.Controls.Add(lOwnershipUnits);
             this.tpFinance.Controls.Add(this.nOwnership);
             this.tpFinance.Controls.Add(this.xUnlimitedFunds);
@@ -455,15 +446,6 @@
             this.tpFinance.TabIndex = 5;
             this.tpFinance.Text = "Finance";
             this.tpFinance.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(33, 154);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 23);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "Count Insane number";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // nOwnership
             // 
@@ -499,7 +481,6 @@
             this.nBankLoanAmount.Name = "nBankLoanAmount";
             this.nBankLoanAmount.Size = new System.Drawing.Size(75, 20);
             this.nBankLoanAmount.TabIndex = 12;
-            this.nBankLoanAmount.ValueChanged += new System.EventHandler(this.nBankLoanAmount_ValueChanged);
             // 
             // nCreditRating
             // 
@@ -537,10 +518,6 @@
             // 
             // tpPrisoners
             // 
-            this.tpPrisoners.Controls.Add(this.m_BodyType);
-            this.tpPrisoners.Controls.Add(this.m_Age);
-            this.tpPrisoners.Controls.Add(this.label2);
-            this.tpPrisoners.Controls.Add(this.label1);
             this.tpPrisoners.Controls.Add(this.moveToPercentage);
             this.tpPrisoners.Controls.Add(this.bRelease);
             this.tpPrisoners.Controls.Add(this.lServedStats);
@@ -561,55 +538,12 @@
             this.tpPrisoners.TabIndex = 2;
             this.tpPrisoners.Text = "Prisoners";
             this.tpPrisoners.UseVisualStyleBackColor = true;
-            this.tpPrisoners.Click += new System.EventHandler(this.tpPrisoners_Click);
-            // 
-            // m_BodyType
-            // 
-            this.m_BodyType.Location = new System.Drawing.Point(221, 186);
-            this.m_BodyType.Name = "m_BodyType";
-            this.m_BodyType.Size = new System.Drawing.Size(100, 20);
-            this.m_BodyType.TabIndex = 17;
-            // 
-            // m_Age
-            // 
-            this.m_Age.Location = new System.Drawing.Point(221, 162);
-            this.m_Age.Name = "m_Age";
-            this.m_Age.Size = new System.Drawing.Size(100, 20);
-            this.m_Age.TabIndex = 16;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(143, 193);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 13);
-            this.label2.TabIndex = 15;
-            this.label2.Text = "Body Type";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(143, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(26, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Age";
-            // 
-            // moveToPercentage
-            // 
-            this.moveToPercentage.Location = new System.Drawing.Point(266, 137);
-            this.moveToPercentage.Name = "moveToPercentage";
-            this.moveToPercentage.Size = new System.Drawing.Size(58, 23);
-            this.moveToPercentage.TabIndex = 13;
-            this.moveToPercentage.Text = "Bond Out!";
-            this.moveToPercentage.UseVisualStyleBackColor = true;
-            this.moveToPercentage.Click += new System.EventHandler(this.moveToPercentage_Click);
             // 
             // bRelease
             // 
-            this.bRelease.Location = new System.Drawing.Point(206, 137);
+            this.bRelease.Location = new System.Drawing.Point(198, 137);
             this.bRelease.Name = "bRelease";
-            this.bRelease.Size = new System.Drawing.Size(58, 23);
+            this.bRelease.Size = new System.Drawing.Size(75, 23);
             this.bRelease.TabIndex = 12;
             this.bRelease.Text = "Release";
             this.bRelease.UseVisualStyleBackColor = true;
@@ -678,9 +612,9 @@
             // 
             // bEliminate
             // 
-            this.bEliminate.Location = new System.Drawing.Point(146, 137);
+            this.bEliminate.Location = new System.Drawing.Point(198, 166);
             this.bEliminate.Name = "bEliminate";
-            this.bEliminate.Size = new System.Drawing.Size(58, 23);
+            this.bEliminate.Size = new System.Drawing.Size(75, 23);
             this.bEliminate.TabIndex = 2;
             this.bEliminate.Text = "Eliminate";
             this.bEliminate.UseVisualStyleBackColor = true;
@@ -724,17 +658,6 @@
             this.clbResearch.Name = "clbResearch";
             this.clbResearch.Size = new System.Drawing.Size(426, 312);
             this.clbResearch.TabIndex = 0;
-            // 
-            // Gang
-            // 
-            this.Gang.BackColor = System.Drawing.Color.DimGray;
-            this.Gang.Controls.Add(this.button2);
-            this.Gang.Location = new System.Drawing.Point(4, 22);
-            this.Gang.Name = "Gang";
-            this.Gang.Padding = new System.Windows.Forms.Padding(3);
-            this.Gang.Size = new System.Drawing.Size(426, 312);
-            this.Gang.TabIndex = 6;
-            this.Gang.Text = "Gang Activity";
             // 
             // menu
             // 
@@ -806,7 +729,6 @@
             // miReleasePrisoners
             // 
             this.miReleasePrisoners.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.miReleaseInsane,
             this.miReleaseProtected,
             this.miReleaseMinSec,
             this.miReleaseNormal,
@@ -819,52 +741,46 @@
             this.miReleasePrisoners.Size = new System.Drawing.Size(196, 22);
             this.miReleasePrisoners.Text = "Release prisoners";
             // 
-            // miReleaseInsane
-            // 
-            this.miReleaseInsane.Name = "miReleaseInsane";
-            this.miReleaseInsane.Size = new System.Drawing.Size(174, 22);
-            this.miReleaseInsane.Text = "Release Insane";
-            // 
             // miReleaseProtected
             // 
             this.miReleaseProtected.Name = "miReleaseProtected";
-            this.miReleaseProtected.Size = new System.Drawing.Size(174, 22);
+            this.miReleaseProtected.Size = new System.Drawing.Size(180, 22);
             this.miReleaseProtected.Text = "Protective Custody";
             // 
             // miReleaseMinSec
             // 
             this.miReleaseMinSec.Name = "miReleaseMinSec";
-            this.miReleaseMinSec.Size = new System.Drawing.Size(174, 22);
+            this.miReleaseMinSec.Size = new System.Drawing.Size(180, 22);
             this.miReleaseMinSec.Text = "Minimum Security";
             // 
             // miReleaseNormal
             // 
             this.miReleaseNormal.Name = "miReleaseNormal";
-            this.miReleaseNormal.Size = new System.Drawing.Size(174, 22);
+            this.miReleaseNormal.Size = new System.Drawing.Size(180, 22);
             this.miReleaseNormal.Text = "Normal Security";
             // 
             // miReleaseMaxSec
             // 
             this.miReleaseMaxSec.Name = "miReleaseMaxSec";
-            this.miReleaseMaxSec.Size = new System.Drawing.Size(174, 22);
+            this.miReleaseMaxSec.Size = new System.Drawing.Size(180, 22);
             this.miReleaseMaxSec.Text = "Maximum Security";
             // 
             // miReleaseSuperMax
             // 
             this.miReleaseSuperMax.Name = "miReleaseSuperMax";
-            this.miReleaseSuperMax.Size = new System.Drawing.Size(174, 22);
+            this.miReleaseSuperMax.Size = new System.Drawing.Size(180, 22);
             this.miReleaseSuperMax.Text = "SuperMax";
             // 
             // miReleaseDeathRow
             // 
             this.miReleaseDeathRow.Name = "miReleaseDeathRow";
-            this.miReleaseDeathRow.Size = new System.Drawing.Size(174, 22);
+            this.miReleaseDeathRow.Size = new System.Drawing.Size(180, 22);
             this.miReleaseDeathRow.Text = "Death Row";
             // 
             // miReleaseAll
             // 
             this.miReleaseAll.Name = "miReleaseAll";
-            this.miReleaseAll.Size = new System.Drawing.Size(174, 22);
+            this.miReleaseAll.Size = new System.Drawing.Size(180, 22);
             this.miReleaseAll.Text = "All";
             // 
             // miEliminatePrisoners
@@ -883,57 +799,51 @@
             this.miEliminatePrisoners.Size = new System.Drawing.Size(196, 22);
             this.miEliminatePrisoners.Text = "Eliminate prisoners";
             // 
-            // miEliminateInsane
-            // 
-            this.miEliminateInsane.Name = "miEliminateInsane";
-            this.miEliminateInsane.Size = new System.Drawing.Size(174, 22);
-            this.miEliminateInsane.Text = "Insane";
-            // 
             // miEliminateProtected
             // 
             this.miEliminateProtected.Name = "miEliminateProtected";
-            this.miEliminateProtected.Size = new System.Drawing.Size(174, 22);
+            this.miEliminateProtected.Size = new System.Drawing.Size(180, 22);
             this.miEliminateProtected.Text = "Protective Custody";
             // 
             // miEliminateMinSec
             // 
             this.miEliminateMinSec.Name = "miEliminateMinSec";
-            this.miEliminateMinSec.Size = new System.Drawing.Size(174, 22);
+            this.miEliminateMinSec.Size = new System.Drawing.Size(180, 22);
             this.miEliminateMinSec.Text = "Minimum Security";
             // 
             // miEliminateNormal
             // 
             this.miEliminateNormal.Name = "miEliminateNormal";
-            this.miEliminateNormal.Size = new System.Drawing.Size(174, 22);
+            this.miEliminateNormal.Size = new System.Drawing.Size(180, 22);
             this.miEliminateNormal.Text = "Normal Security";
             // 
             // miEliminateMaxSec
             // 
             this.miEliminateMaxSec.Name = "miEliminateMaxSec";
-            this.miEliminateMaxSec.Size = new System.Drawing.Size(174, 22);
+            this.miEliminateMaxSec.Size = new System.Drawing.Size(180, 22);
             this.miEliminateMaxSec.Text = "Maximum Security";
             // 
             // miEliminateSuperMax
             // 
             this.miEliminateSuperMax.Name = "miEliminateSuperMax";
-            this.miEliminateSuperMax.Size = new System.Drawing.Size(174, 22);
+            this.miEliminateSuperMax.Size = new System.Drawing.Size(180, 22);
             this.miEliminateSuperMax.Text = "SuperMax";
             // 
             // miEliminateDeathRow
             // 
             this.miEliminateDeathRow.Name = "miEliminateDeathRow";
-            this.miEliminateDeathRow.Size = new System.Drawing.Size(174, 22);
+            this.miEliminateDeathRow.Size = new System.Drawing.Size(180, 22);
             this.miEliminateDeathRow.Text = "Death Row";
             // 
             // sEliminatePrisonersSeparator
             // 
             this.sEliminatePrisonersSeparator.Name = "sEliminatePrisonersSeparator";
-            this.sEliminatePrisonersSeparator.Size = new System.Drawing.Size(171, 6);
+            this.sEliminatePrisonersSeparator.Size = new System.Drawing.Size(177, 6);
             // 
             // miEliminateAll
             // 
             this.miEliminateAll.Name = "miEliminateAll";
-            this.miEliminateAll.Size = new System.Drawing.Size(174, 22);
+            this.miEliminateAll.Size = new System.Drawing.Size(180, 22);
             this.miEliminateAll.Text = "All";
             // 
             // miRevealReputations
@@ -986,15 +896,31 @@
             this.miAbout.Text = "About";
             this.miAbout.Click += new System.EventHandler(this.miAbout_Click);
             // 
-            // button2
+            // Gang
             // 
-            this.button2.Location = new System.Drawing.Point(54, 45);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "GetGangMember";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Gang.BackColor = System.Drawing.Color.DimGray;
+            this.Gang.Location = new System.Drawing.Point(4, 22);
+            this.Gang.Name = "Gang";
+            this.Gang.Padding = new System.Windows.Forms.Padding(3);
+            this.Gang.Size = new System.Drawing.Size(426, 312);
+            this.Gang.TabIndex = 6;
+            this.Gang.Text = "Gang Activity";
+            // 
+            // miEliminateInsane
+            // 
+            this.miEliminateInsane.Name = "miEliminateInsane";
+            this.miEliminateInsane.Size = new System.Drawing.Size(180, 22);
+            this.miEliminateInsane.Text = "Insane";
+            // 
+            // moveToPercentage
+            // 
+            this.moveToPercentage.Location = new System.Drawing.Point(328, 137);
+            this.moveToPercentage.Name = "moveToPercentage";
+            this.moveToPercentage.Size = new System.Drawing.Size(75, 23);
+            this.moveToPercentage.TabIndex = 13;
+            this.moveToPercentage.Text = "Bond Out!";
+            this.moveToPercentage.UseVisualStyleBackColor = true;
+            this.moveToPercentage.Click += new System.EventHandler(this.moveToPercentage_Click);
             // 
             // MainForm
             // 
@@ -1025,7 +951,6 @@
             this.tpPrisoners.ResumeLayout(false);
             this.tpPrisoners.PerformLayout();
             this.tpResearch.ResumeLayout(false);
-            this.Gang.ResumeLayout(false);
             this.menu.ResumeLayout(false);
             this.menu.PerformLayout();
             this.ResumeLayout(false);
@@ -1102,13 +1027,6 @@
         private System.Windows.Forms.TabPage Gang;
         private System.Windows.Forms.ToolStripMenuItem miEliminateInsane;
         private System.Windows.Forms.Button moveToPercentage;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox m_BodyType;
-        private System.Windows.Forms.TextBox m_Age;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem miReleaseInsane;
-        private System.Windows.Forms.Button button2;
     }
 }
 
