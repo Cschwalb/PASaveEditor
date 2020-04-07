@@ -23,27 +23,30 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AboutBox));
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.bClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.Color.Black;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.richTextBox1.ForeColor = System.Drawing.Color.RoyalBlue;
             this.richTextBox1.Location = new System.Drawing.Point(5, 5);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(258, 104);
+            this.richTextBox1.Size = new System.Drawing.Size(258, 154);
             this.richTextBox1.TabIndex = 0;
-            this.richTextBox1.Text = "PSAE DEVELOPMENT V1.0 by Crypto.";
+            this.richTextBox1.Text = resources.GetString("richTextBox1.Text");
             this.richTextBox1.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBox1_LinkClicked);
             // 
             // bClose
             // 
             this.bClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bClose.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.bClose.Location = new System.Drawing.Point(5, 86);
+            this.bClose.Location = new System.Drawing.Point(5, 136);
             this.bClose.Name = "bClose";
             this.bClose.Size = new System.Drawing.Size(258, 23);
             this.bClose.TabIndex = 1;
@@ -57,7 +60,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.bClose;
-            this.ClientSize = new System.Drawing.Size(268, 114);
+            this.ClientSize = new System.Drawing.Size(268, 164);
             this.Controls.Add(this.bClose);
             this.Controls.Add(this.richTextBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;

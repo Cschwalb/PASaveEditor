@@ -38,7 +38,7 @@ namespace PASaveEditor.FileModel
 
         public override void WriteProperties(Writer writer)
         {
-            writer.WriteProperty("Size", Prisoners.Count);
+            writer.WriteProperty("GangMembers", Prisoners.Count);
         }
 
 

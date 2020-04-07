@@ -46,6 +46,7 @@ namespace PASaveEditor {
             miEliminateMaxSec.Click += delegate { Eliminate("MaxSec"); };
             miEliminateSuperMax.Click += delegate { Eliminate("SuperMax"); };
             miEliminateDeathRow.Click += delegate { Eliminate("DeathRow"); };
+            miEliminateInsane.Click += delegate { Eliminate("Insane"); }; // patch to allow for insane to be eliminated.
             miEliminateAll.Click += delegate { EliminateAll(); };
 
             miReleaseProtected.Click += delegate { Release("Protected"); };
@@ -54,6 +55,7 @@ namespace PASaveEditor {
             miReleaseMaxSec.Click += delegate { Release("MaxSec"); };
             miReleaseSuperMax.Click += delegate { Release("SuperMax"); };
             miReleaseDeathRow.Click += delegate { Release("DeathRow"); };
+            miReleaseInsane.Click += delegate { Release("Insane"); }; // patch to allow for insane to be released.
             miReleaseAll.Click += delegate { ReleaseAll(); };
 
             miExit.Click += delegate { Close(); };
@@ -518,7 +520,11 @@ namespace PASaveEditor {
 
         private void button2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("In the works!");
+            Gang x;
+            int nNumberOfGangmembers = 0;
+            string s
+            x.ReadKey(string.Format("GangMembers"), )
+            MessageBox.Show(String.Format("Gang Members: {0}", );
             /*
             prison x;
             foreach(string tPrisoner in prisonerNames)

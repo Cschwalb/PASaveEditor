@@ -117,4 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="richTextBox1.Text" xml:space="preserve">
+    <value>Prison Architect Logistics Tool.
+Updated to Sneezer Version
+github.com/Cschwalb/PSAE
+Project started up again 2020 Caleb Schwalb
+*No rights reserved - See license.*
+Copyright (c) 2014 Matvei "fragmer" Stefarov
+All rights reserved.</value>
+  </data>
 </root>
