@@ -30,7 +30,7 @@ namespace PASaveEditor {
             string paSavePath = Path.Combine(
                 Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                 "Introversion", "Prison Architect", "saves");
-
+            // this is a vulnerability in the code; consider a scrape.
             openDialog = new OpenFileDialog {
                 Filter = FileFilter,
                 InitialDirectory = paSavePath
@@ -518,11 +518,14 @@ namespace PASaveEditor {
 
         private void button2_Click(object sender, EventArgs e)
         {
+            MessageBox.Show("In the works!");
+            /*
             prison x;
             foreach(string tPrisoner in prisonerNames)
             {
                 
             }
+            */
         }
     }
 }
